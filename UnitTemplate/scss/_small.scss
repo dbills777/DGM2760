@@ -1,0 +1,45 @@
+/*-----Prevents iPhone from resizing in portrait/landscape mode -----*/
+/* html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+} Theese rules are include on line 14,15 of our normalize file and are only needed if using a normalize file where they are included!!!!*/
+/*----------- apply a natural box layout model to all elements --------------*/
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 75rem;
+  margin: auto;
+}
+/* fixes collapse of navbar on med,large screens.. must add class to nav elemnt in html */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// start my styles after this line=======================================================================================================================================
+.header {
+  height: 200px;
+  background-image: url("https://picsum.photos/600");
+  background-size: cover;
+  background-position: center;
+  min-width: 800px;
+}
+.main-container {
+  height: 60vh;
+  display: grid;
+}
+li {
+  list-style-type: circle;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 15vh;
+  align-items: center;
+  text-align: center;
+  background-color: #777;
+}

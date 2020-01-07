@@ -13,5 +13,5 @@ dateSpan.textContent = ` ${date}`;
 //prompt for the greeting name and create the message
 const greet = document.querySelector("#greet");
 greet.textContent = `Hello ${prompt(
-  "Please Enter your name"
+  "Please Enter Your Name"
 )}, How are you today?`;
