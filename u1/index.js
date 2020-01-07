@@ -4,14 +4,21 @@ document.querySelector("#companyName").textContent = "Joes Bed & Breakfast";
 document.querySelector("#companySlogan").textContent =
   "Welcome to Joes Bed and Breakfast!";
 const currentDate = new Date();
-// query elemten to place date
+// select element to place date
 dateSpan = document.querySelector(".span");
 //create the date
 const date = new Date().toLocaleDateString();
 //set its text content with template string
 dateSpan.textContent = ` ${date}`;
-//prompt for the greeting name and create the message
+// select element to place greet input
 const greet = document.querySelector("#greet");
-greet.textContent = `Hello ${prompt(
-  "Please Enter Your Name"
-)}, How are you today?`;
+
+function name() {
+  let visitor = prompt("what is your name");
+  if (visitor == null) {
+    greet.textContent = "You Didn't Provide a Name, you're welcome anyway!";
+  } else {
+    greet.textContent = `Hello ${visitor}, Welcome to Joes Bed and Breakfast!`;
+  }
+}
+name();

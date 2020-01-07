@@ -26,6 +26,7 @@ $background-color: rgb(170, 170, 170);
 
 body {
   background-color: $background-color;
+  margin-top: 1rem;
 }
 .header {
   div {
@@ -59,9 +60,11 @@ body {
 }
 ul {
   background-color: lighten($background-color, 20%);
+  list-style-image: url(../images/check.png);
+  background-position: center;
 }
 li {
-  list-style-type: circle;
+  padding: 5px;
 }
 .footer {
   display: grid;
