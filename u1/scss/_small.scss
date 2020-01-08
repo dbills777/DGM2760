@@ -55,7 +55,7 @@ body {
 }
 .main-container {
   background-color: lighten($background-color, 30%);
-  height: 60vh;
+  height: 70vh;
   display: grid;
 }
 ul {
@@ -69,7 +69,7 @@ li {
 .footer {
   display: grid;
   grid-template-columns: 1fr;
-  height: 15vh;
+  height: 5vh;
   align-items: center;
   text-align: center;
   background-color: $base-color;
