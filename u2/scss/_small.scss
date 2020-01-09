@@ -21,17 +21,16 @@
 }
 
 // start my styles after this line=======================================================================================================================================
-$base-color: rgb(168, 192, 196);
+$base-color: rgb(167, 24, 233);
 $background-color: rgb(170, 170, 170);
 
 body {
   background-color: $background-color;
-  margin-top: 1rem;
 }
 .header {
   padding: 1rem;
   div {
-    border-bottom: 5px solid rgb(0, 0, 0);
+    border-bottom: 5px solid $base-color;
     margin: 0;
     padding: 0;
   }
@@ -41,36 +40,37 @@ body {
 
   justify-content: start;
   height: 200px;
-  background-image: url("https://images.unsplash.com/photo-1516705051158-795390ef6664?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
+  background-image: url("https://picsum.photos/600");
   background-size: cover;
   background-position: center;
-  // min-width: 800px;
+  min-width: 800px;
   opacity: 0.6;
   h2,
   h1 {
     color: rgb(255, 255, 255);
-    margin-left: 1rem;
+    margin: 0;
     opacity: 1;
     text-transform: uppercase;
   }
 }
 .main-container {
   background-color: lighten($background-color, 30%);
-  height: 70vh;
+  height: 60vh;
   display: grid;
+  grid-template-columns: 1fr 1fr;
 }
+
 ul {
-  background-color: lighten($background-color, 20%);
+  background-color: lighten($base-color, 25%);
   list-style-image: url(../images/check.png);
   background-position: center;
 }
 li {
-  padding: 5px;
 }
 .footer {
   display: grid;
   grid-template-columns: 1fr;
-  height: 5vh;
+  height: 15vh;
   align-items: center;
   text-align: center;
   background-color: $base-color;
