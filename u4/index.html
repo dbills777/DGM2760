@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- google font is in the css file -->
+    <meta
+      name="veiwport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta charset="utf-8" />
+    <meta name="description" content="Fill Me In" />
+    <meta name="author" content="John Doe" />
+    <title>Fortune TEller-Bills</title>
+    <script defer src="index.js"></script>
+    <link href="scss/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div>
+        <h1 id="companyName"></h1>
+        <h2 id="companySlogan"></h2>
+      </div>
+    </header>
+    <main class="main-container">
+      <div>
+        <h2>What I Learned</h2>
+        <ul class="objectives">
+          <li>Generated a random number</li>
+          <li>Used Math Functions</li>
+          <li>Pass values to and return values from a function</li>
+          <li>Switch statements</li>
+          <li>String concatenation</li>
+          <li>Manipulated DOM elements</li>
+
+        </ul>
+      </div>
+      <div class="properties">
+        <h1>Instructions:</h1>
+        This game will require you to guess the number that is randomly
+        generated. The program will tell you if your guess is too high or too
+        low. You can only guess between the numbers 1-15. You will be awarded
+        based on the number of attempts it takes you to guess the correct
+        number.
+      </div>
+      <div class="game">
+        <section class="input">
+          <input
+            type="number"
+            id="guess"
+            placeholder="Pick a number"
+            min="1"
+            max="15"
+          />
+          <button id="submitBtn" onclick="tellFortune()">Guess</button>
+        </section>
+        <section class="gameOut">
+          <ul class="results">
+              
+            </li>
+            <li id="number">Your Fortune:</li>
+            <li id="result"></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Derrick Bills Unit04 DGM 2760 &copy 2020</p>
+    </footer>
+  </body>
+</html>

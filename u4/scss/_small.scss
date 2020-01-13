@@ -1,0 +1,106 @@
+/*-----Prevents iPhone from resizing in portrait/landscape mode -----*/
+/* html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+} Theese rules are include on line 14,15 of our normalize file and are only needed if using a normalize file where they are included!!!!*/
+/*----------- apply a natural box layout model to all elements --------------*/
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 75rem;
+  margin: auto;
+}
+/* fixes collapse of navbar on med,large screens.. must add class to nav elemnt in html */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// start my styles after this line=======================================================================================================================================
+$base-color: rgb(223, 223, 223);
+$background-color: rgb(182, 177, 192);
+
+body {
+  background-color: $background-color;
+}
+.header {
+  div {
+    border-bottom: 5px solid rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+  }
+  display: grid;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+  justify-content: start;
+  height: 200px;
+  background-image: url("../images/fortune.jpg");
+  background-size: fill;
+  background-position: center;
+  min-width: 800px;
+  opacity: 0.8;
+  h2,
+  h1 {
+    color: rgb(105, 105, 105);
+    margin: 0;
+    opacity: 1;
+    text-transform: uppercase;
+  }
+}
+.main-container {
+  background-color: lighten($background-color, 30%);
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+ul {
+  background-color: lighten($background-color, 20%);
+}
+
+.game {
+  grid-column: 1 / span 2;
+  width: 100%;
+  background-color: $background-color;
+  #guess {
+    margin: 1rem;
+    background: none;
+    border: none;
+    border-radius: 50px;
+    width: 150px;
+  }
+}
+.input {
+  text-align: center;
+}
+.results {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  ul,
+  li {
+    font-size: 2rem;
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+.award {
+  max-width: 20px;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 15vh;
+  align-items: center;
+  text-align: center;
+  background-color: $base-color;
+}

@@ -77,6 +77,10 @@ function award() {
     case 7:
     case 8:
     case 9:
+    case 11:
+    case 12:
+    case 13:
+    case 14:
       prize.setAttribute("src", "./images/yellow.jpg");
 
       break;
