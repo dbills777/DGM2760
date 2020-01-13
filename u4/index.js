@@ -4,19 +4,17 @@ document.querySelector("#companyName").textContent = "Fortune Teller";
 document.querySelector("#companySlogan").textContent =
   "Play to recieve your fortune!";
 
-const youWon = document.querySelector(".gameOut");
-
+//get areas to append the results to
 let result = document.createElement("p");
 let results = document.querySelector("#result");
 
-//create a random number between 1 and 12.
-
+//generate random numbers between specific values
 function randomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
+//get a random month
 function getMonth(month) {
   switch (month) {
     case 1:
@@ -62,8 +60,8 @@ function getMonth(month) {
   }
   return name;
 }
+//get a random fate
 function fortune(fate) {
-  let message;
   switch (fate) {
     case 1:
       message =
@@ -90,18 +88,17 @@ function fortune(fate) {
   }
   return message;
 }
+//getquote button action  append items to dom
+function tellFortune() {
+  let month = randomNumber(1, 12);
+  let fate = randomNumber(1, 5);
+  let day = randomNumber(1, 30);
+  const monthName = getMonth(month);
+  const fortuneMessage = fortune(fate);
 
-let month = randomNumber(1, 12);
-let fate = randomNumber(1, 5);
-let day = randomNumber(1, 30);
-const monthName = getMonth(month);
-const fortuneMessage = fortune(fate);
-console.log(fortuneMessage);
+  const outFortune = `For ${monthName} ${day}, Your Quote Is:
+   ${fortuneMessage}`;
 
-console.log(monthName);
-
-const outFortune = `On ${monthName} ${day}, You will ${fate}`;
-console.log(outFortune);
-
-result.textContent = outFortune;
-results.appendChild(result);
+  result.textContent = outFortune;
+  results.appendChild(result);
+}
