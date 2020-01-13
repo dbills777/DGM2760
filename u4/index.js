@@ -97,7 +97,7 @@ function tellFortune() {
   const fortuneMessage = fortune(fate);
 
   const outFortune = `For ${monthName} ${day}, Your Quote Is:
-   ${fortuneMessage}`;
+   "${fortuneMessage}"`;
 
   result.textContent = outFortune;
   results.appendChild(result);
