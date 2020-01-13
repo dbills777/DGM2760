@@ -17,10 +17,6 @@ function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let month = randomNumber(1, 12);
-let fate = randomNumber(1, 5);
-let day = randomNumber(1, 30);
-
 function getMonth(month) {
   switch (month) {
     case 1:
@@ -95,6 +91,9 @@ function fortune(fate) {
   return message;
 }
 
+let month = randomNumber(1, 12);
+let fate = randomNumber(1, 5);
+let day = randomNumber(1, 30);
 const monthName = getMonth(month);
 const fortuneMessage = fortune(fate);
 console.log(fortuneMessage);
