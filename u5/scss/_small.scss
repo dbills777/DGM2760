@@ -1,0 +1,115 @@
+/*-----Prevents iPhone from resizing in portrait/landscape mode -----*/
+/* html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+} Theese rules are include on line 14,15 of our normalize file and are only needed if using a normalize file where they are included!!!!*/
+/*----------- apply a natural box layout model to all elements --------------*/
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 75rem;
+  margin: auto;
+}
+/* fixes collapse of navbar on med,large screens.. must add class to nav elemnt in html */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// start my styles after this line=======================================================================================================================================
+$base-color: #18ab29;
+$background-color: rgb(170, 170, 170);
+
+body {
+  background-color: $background-color;
+}
+.header {
+  padding: 1rem;
+  div {
+    border-bottom: 5px solid $base-color;
+    margin: 0;
+    padding: 0;
+  }
+  display: grid;
+  grid-auto-columns: 1fr;
+  align-items: end;
+
+  justify-content: end;
+  height: 200px;
+  background-image: url("../images/trees.jpg");
+  background-size: cover;
+  background-position: center;
+  min-width: 800px;
+  opacity: 0.6;
+  h2,
+  h1 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    opacity: 1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+.title {
+  width: 100%;
+  grid-column: 1 / span 2;
+  text-align: center;
+}
+.main-container {
+  background-color: lighten($background-color, 30%);
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+}
+
+ul {
+  background-color: lighten($base-color, 25%);
+  list-style-image: url(../images/check.png);
+  background-position: center;
+}
+.properties {
+  display: grid;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 10vh;
+  align-items: center;
+  text-align: center;
+  background-color: $base-color;
+}
+.myButton {
+  background-color: #44c767;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 16px 31px;
+  margin: 0.5rem;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+.myButton:hover {
+  background-color: #5cbf2a;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+#displayResults {
+  border-top: 2px solid #18ab29;
+  background-color: $base-color;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+#error {
+  border-top: 2px solid #18ab29;
+}
