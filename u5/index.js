@@ -3,7 +3,7 @@ document.querySelector("#companyName").textContent = "The Arborist";
 //set the company slogan
 document.querySelector("#companySlogan").textContent = "Sort & Display Arrays";
 //initial array
-const trees = ["oak", "Palm Tree", "spruce", "Juniper"];
+const trees = ["aspen", "Palm Tree", "spruce", "Juniper"];
 //error handler
 const errorElement = document.querySelector("#error");
 //results display
