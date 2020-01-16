@@ -10,16 +10,16 @@ const errorElement = document.querySelector("#error");
 const displaResults = document.querySelector("#displayResults");
 // Get heading for the tree list for specific tree numbers
 const treeListTitle = document.querySelector(".treeListTitle");
-
 const listTrees = () => {
   let treeList = "";
   trees.forEach(tree => {
     treeList += `${tree}<br>`;
     displayResults.innerHTML = `${treeList} <span>${trees.length} trees in the list.</span>`;
   });
+  // listTrees();
 };
-
 listTrees();
+
 // BUTTON HANDLERS*****************************************
 // RedWood Push
 document.querySelector("#add_redwood").onclick = () => {
@@ -33,14 +33,15 @@ document.querySelector("#add_pear").onclick = () => {
 };
 //Remove first tree
 document.querySelector("#remove_tree1").onclick = () => {
-  if (trees.length > 0) {
+  if (trees.length > 1) {
     trees.shift();
+    listTrees();
   } else {
+    listTrees();
+
     error.textContent = "you need one tree to delete the first one";
     displayResults.textContent = "";
-    listTrees();
   }
-  listTrees();
 };
 //Remove second tree
 document.querySelector("#remove_tree2").onclick = () => {
@@ -54,13 +55,15 @@ document.querySelector("#remove_tree2").onclick = () => {
 };
 //Remove last tree
 document.querySelector("#remove_treeLast").onclick = () => {
-  if (trees.length) {
+  if (trees.length > 1) {
     trees.pop();
+    listTrees();
   } else {
+    listTrees();
+
     error.textContent = "you need one tree to delete the last one";
     displayResults.textContent = "";
   }
-  listTrees();
 };
 
 //Sort the array locale compare after tolowercase will sort alphabetically in the same case but not change the originally array
