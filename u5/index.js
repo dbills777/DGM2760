@@ -2,9 +2,8 @@
 document.querySelector("#companyName").textContent = "The Arborist";
 //set the company slogan
 document.querySelector("#companySlogan").textContent = "Sort & Display Arrays";
-
 //initial array
-const trees = ["oak", "Pine", "spruce", "Juniper"];
+const trees = ["oak", "palm tree", "Pine", "spruce", "Juniper"];
 //error handler
 const errorElement = document.querySelector("#error");
 //results display
@@ -38,7 +37,6 @@ document.querySelector("#add_pear").onclick = () => {
 //Remove first tree
 document.querySelector("#remove_tree1").onclick = () => {
   if (trees.length > 0) {
-    // trees.splice(0, 1);
     trees.shift();
     listTrees();
   } else {
@@ -49,7 +47,11 @@ document.querySelector("#remove_tree1").onclick = () => {
 };
 //Remove second tree
 document.querySelector("#remove_tree2").onclick = () => {
-  trees.splice(1, 1);
+  if (trees.length > 1) {
+    trees.splice(1, 1);
+  } else {
+    error.textContent = "There is not second tree to remove from the list";
+  }
   listTrees();
 };
 //Remove last tree
@@ -78,15 +80,26 @@ document.querySelector("#lowerTrees").onclick = () => {
   });
 };
 document.querySelector("#showName3").onclick = () => {
-  console.log(trees.length);
-  treeList = [...trees];
-  displayResults.innerHTML = `${treeList[2]}`;
-  treeListTitle.innerHTML = "The name of the third tree is:";
+  if (trees[2] === undefined) {
+    console.log("no tree 3");
+    displayResults.innerHTML = "";
+    error.innerHTML = "there is no tree 3 to display";
+  } else {
+    console.log(trees.length);
+    treeList = [...trees];
+    displayResults.innerHTML = `${treeList[2]}`;
+    treeListTitle.innerHTML = "The name of the third tree is:";
+  }
 };
 document.querySelector("#showName4").onclick = () => {
-  console.log(trees.length);
-  treeList = [...trees];
-  displayResults.innerHTML = `${treeList[3]}`;
-  treeListTitle.innerHTML = "The name of the fourth tree is:";
-  console.log("check");
+  if (trees[3] === undefined) {
+    displaResults.innerHTML = "";
+    error.innerHTML = "there is no tree 4 to dipslay";
+  } else {
+    console.log(trees.length);
+    treeList = [...trees];
+    displayResults.innerHTML = `${treeList[3]}`;
+    treeListTitle.innerHTML = "The name of the fourth tree is:";
+    console.log("check");
+  }
 };
