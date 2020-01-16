@@ -68,9 +68,12 @@ document.querySelector("#remove_treeLast").onclick = () => {
 
 //Sort the array locale compare after tolowercase will sort alphabetically in the same case but not change the originally array
 document.querySelector("#sortTrees").onclick = () => {
-  lowercase = trees.map(tree => tree.toLowerCase());
+  trees.sort((a, b) => {
+    return a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase());
+  });
   listTrees();
 };
+//Make all trees lowercase
 document.querySelector("#lowerTrees").onclick = () => {
   trees.toLocaleString();
   // console.log(trees.toLocaleString().toLowerCase());
