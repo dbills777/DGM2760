@@ -23,35 +23,41 @@
     </header>
     <main class="main-container">
       <h1 class="title">The Arboist</h1>
+      <div class="objectives"></div>
+        <ul class="">
+          What I learned
+          <li>Create and manipulate Values in an array</li>
+          <li>Implement Event Handlers</li>
+          <li>Implement Event Listeners</li>
+          <li>Implement Error Checking On incoming Values</li>
+        </ul>
+      </div>
       <div class="properties">
         <h3>Adding Trees</h3>
         <button class="myButton" id="add_redwood">
           Add A Redwood Tree to the end
         </button>
-        <button class="myButton" id="add_redwood">
+        <button class="myButton" id="add_pear">
           Add A Pear Tree to the Start
         </button>
       </div>
       <div class="properties">
         <h3>Removing Trees</h3>
         <button class="myButton" id="remove_tree1">
-          Add A Redwood Tree to the end
+          Remove the first tree
         </button>
         <button class="myButton" id="remove_tree2">
-          Add A Pear Tree to the Start
+          Remove the second tree
         </button>
         <button class="myButton" id="remove_treeLast">
-          Add A Pear Tree to the Start
+          Remove the last tree
         </button>
       </div>
       <div class="properties">
         <h3>Manipulating The Tree List</h3>
-        <button class="myButton" id="SortTrees">View a Sorted list A-Z</button>
+        <button class="myButton" id="sortTrees">View a Sorted list A-Z</button>
         <button class="myButton" id="lowerTrees">
           Make All Tree Names Lower Case
-        </button>
-        <button class="myButton" id="remove_treeLast">
-          Add A Pear Tree to the Start
         </button>
       </div>
       <div class="properties">
@@ -59,17 +65,9 @@
         <button class="myButton" id="showName3">View Tree #3 Name</button>
         <button class="myButton" id="showName4">View Tree #4 Name</button>
       </div>
+
       <div>
-        <h2>What I Learned</h2>
-        <ul class="objectives">
-          <li>Create and manipulate Values in an array</li>
-          <li>Implement Event Handlers</li>
-          <li>Implement Event Listeners</li>
-          <li>Implement Error Checking On incoming Values</li>
-        </ul>
-      </div>
-      <div>
-        <h2>The Tree List</h2>
+        <h2 class="treeListTitle">The Tree List</h2>
         <div id="displayResults"></div>
         <h2>Error Messages</h2>
         <div id="error"></div>

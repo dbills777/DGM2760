@@ -61,7 +61,7 @@ body {
 }
 .main-container {
   background-color: lighten($background-color, 30%);
-  height: 80vh;
+  // height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr;
@@ -75,10 +75,17 @@ ul {
 .properties {
   display: grid;
 }
+.objectives {
+  height: 150px;
+  grid-column: 1 / span 2;
+}
+span {
+  color: white;
+}
 .footer {
   display: grid;
   grid-template-columns: 1fr;
-  height: 10vh;
+  // height: 10vh;
   align-items: center;
   text-align: center;
   background-color: $base-color;
@@ -109,7 +116,9 @@ ul {
   background-color: $base-color;
   padding: 1rem;
   font-size: 1.5rem;
+  height: 100%;
 }
 #error {
   border-top: 2px solid #18ab29;
+  color: red;
 }
