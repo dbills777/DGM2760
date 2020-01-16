@@ -22,7 +22,7 @@
 
 // start my styles after this line=======================================================================================================================================
 $base-color: #18ab29;
-$background-color: rgb(170, 170, 170);
+$background-color: rgb(114, 113, 113);
 
 body {
   background-color: $background-color;
@@ -56,15 +56,16 @@ body {
 }
 .title {
   width: 100%;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
   text-align: center;
 }
 .main-container {
   background-color: lighten($background-color, 30%);
   // height: 80vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr;
+  align-content: start;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 ul {
@@ -76,8 +77,8 @@ ul {
   display: grid;
 }
 .objectives {
-  height: 150px;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
+  grid-row: 1;
 }
 span {
   color: white;

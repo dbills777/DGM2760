@@ -3,7 +3,7 @@ document.querySelector("#companyName").textContent = "The Arborist";
 //set the company slogan
 document.querySelector("#companySlogan").textContent = "Sort & Display Arrays";
 //initial array
-const trees = ["oak", "palm tree", "Pine", "spruce", "Juniper"];
+const trees = ["oak", "Palm Tree", "spruce", "Juniper"];
 //error handler
 const errorElement = document.querySelector("#error");
 //results display
@@ -17,9 +17,6 @@ const listTrees = () => {
     treeList += `${tree}<br>`;
     displayResults.innerHTML = `${treeList} <span>${trees.length} trees in the list.</span>`;
   });
-  if (errorElement.hasChildNodes) {
-    error.textContent = "";
-  }
 };
 
 listTrees();
@@ -38,33 +35,37 @@ document.querySelector("#add_pear").onclick = () => {
 document.querySelector("#remove_tree1").onclick = () => {
   if (trees.length > 0) {
     trees.shift();
-    listTrees();
   } else {
-    trees.length = 0;
-    error.textContent = "you have no trees left";
+    error.textContent = "you need one tree to delete the first one";
     displayResults.textContent = "";
+    listTrees();
   }
+  listTrees();
 };
 //Remove second tree
 document.querySelector("#remove_tree2").onclick = () => {
-  if (trees.length > 1) {
+  if (trees.length < 2) {
+    errorElement.textContent =
+      "you need at least two trees to delete the second tree";
+  } else if (trees.length >= 2) {
     trees.splice(1, 1);
-  } else {
-    error.textContent = "There is not second tree to remove from the list";
   }
   listTrees();
 };
 //Remove last tree
 document.querySelector("#remove_treeLast").onclick = () => {
-  trees.splice(trees.length - 1, 1);
+  if (trees.length) {
+    trees.pop();
+  } else {
+    error.textContent = "you need one tree to delete the last one";
+    displayResults.textContent = "";
+  }
   listTrees();
 };
 
 //Sort the array locale compare after tolowercase will sort alphabetically in the same case but not change the originally array
 document.querySelector("#sortTrees").onclick = () => {
-  trees.sort((a, b) => {
-    return a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase());
-  });
+  lowercase = trees.map(tree => tree.toLowerCase());
   listTrees();
 };
 document.querySelector("#lowerTrees").onclick = () => {
@@ -80,26 +81,22 @@ document.querySelector("#lowerTrees").onclick = () => {
   });
 };
 document.querySelector("#showName3").onclick = () => {
-  if (trees[2] === undefined) {
-    console.log("no tree 3");
+  if (trees.length < 3) {
     displayResults.innerHTML = "";
-    error.innerHTML = "there is no tree 3 to display";
+    errorElement.innerHTML = "there is no tree 3 to display";
   } else {
-    console.log(trees.length);
     treeList = [...trees];
-    displayResults.innerHTML = `${treeList[2]}`;
-    treeListTitle.innerHTML = "The name of the third tree is:";
+    displayResults.innerHTML = `Tree #3 is: ${treeList[2]}`;
   }
 };
 document.querySelector("#showName4").onclick = () => {
-  if (trees[3] === undefined) {
+  if (trees.length < 4) {
     displaResults.innerHTML = "";
-    error.innerHTML = "there is no tree 4 to dipslay";
+    errorElement.textContent = "there is no tree 4 to dipslay";
   } else {
     console.log(trees.length);
     treeList = [...trees];
-    displayResults.innerHTML = `${treeList[3]}`;
-    treeListTitle.innerHTML = "The name of the fourth tree is:";
+    displayResults.innerHTML = `Tree # 4: is ${treeList[3]}`;
     console.log("check");
   }
 };
