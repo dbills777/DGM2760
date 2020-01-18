@@ -64,7 +64,13 @@ body {
 ul {
   background-color: lighten($background-color, 20%);
 }
-
+.textareas {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1 / span 2;
+  // background-color: black;
+}
 .game {
   grid-column: 1 / span 2;
   width: 100%;
