@@ -23,7 +23,7 @@ function tellStory() {
     .value.toLowerCase()
     .split(/\s*[,\n." "]+\s*/);
   console.log(verbArray);
-  const theStory = `Once upon a time there were four ${nounArray[0]}'s`;
+  const theStory = `Once upon a time there were four <span>${nounArray[0]}'s</span>`;
   const output = document.querySelector("#result");
-  output.textContent = theStory;
+  output.innerHTML = theStory;
 }
