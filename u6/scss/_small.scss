@@ -75,13 +75,6 @@ ul {
   grid-column: 1 / span 2;
   width: 100%;
   background-color: $background-color;
-  #guess {
-    margin: 1rem;
-    background: none;
-    border: none;
-    border-radius: 50px;
-    width: 150px;
-  }
 }
 .input {
   text-align: center;
@@ -91,8 +84,23 @@ ul {
     font-size: 1.5rem;
   }
 }
+textarea {
+  margin: 5px;
+}
+#submitBtn {
+  justify-self: center;
+  grid-column: 1 / span 2;
+  width: 200px;
+  border-radius: 10px;
+  color: $base-color;
+  background-color: $background-color;
+  cursor: pointer;
+}
 span {
   color: red;
+  .wild {
+    color: orange;
+  }
 }
 .results {
   list-style: none;
