@@ -1,15 +1,12 @@
 //set the company name
-document.querySelector("#companyName").textContent = "The Arborist";
+document.querySelector("#companyName").textContent = "Pizza Emporium";
 //set the company slogan
-document.querySelector("#companySlogan").textContent = "Sort & Display Arrays";
-//initial array
-const trees = ["aspen", "spruce", "Palm Tree", "Juniper"];
-//error handler
+document.querySelector("#companySlogan").textContent = "Object Literals";
 const errorElement = document.querySelector("#error");
 //results display
 const displaResults = document.querySelector("#displayResults");
 // Get heading for the tree list for specific tree numbers
-const treeListTitle = document.querySelector(".treeListTitle");
+const treeListTitle = document.querySelector(".shopListTitle");
 const listTrees = () => {
   let treeList = "";
   trees.forEach(tree => {

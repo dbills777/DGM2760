@@ -1,7 +1,8 @@
 //set the company name
 document.querySelector("#companyName").textContent = "Nonsense Story";
 //set the company slogan
-document.querySelector("#companySlogan").textContent = "String Manipulation";
+document.querySelector("#companySlogan").textContent =
+  "Create Your Nonsense Story";
 
 //get areas to append the results to
 let result = document.createElement("p");
