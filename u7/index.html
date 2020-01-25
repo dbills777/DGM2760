@@ -51,25 +51,20 @@
           <h3>Topping Options</h3>
 
           <fieldset id="toppings">
-            <input
-              type="radio"
-              id="sausage"
-              name="topping"
-              value="sausage"
-              checked
-            />
+            <input type="radio" id="sausage" name="topping" value="sausage" />
             <label for="sausage">Sausage</label>
             <input
               type="radio"
               id="pepperoni"
               name="topping"
               value="pepperoni"
+              checked
             />
             <label for="pepperoni">Pepperoni</label>
           </fieldset>
           <h3>Size Options</h3>
 
-          <fieldset id="crust_types">
+          <fieldset id="size">
             <input type="radio" id="small" name="size" value="small" checked />
             <label for="small">Small</label>
             <input type="radio" id="large" name="size" value="large" />
@@ -87,11 +82,10 @@
           Create Shopping List
         </button>
       </div>
-      <div>
-        <h2 class="shopListTitle">Here is Your Shopping List</h2>
+      <div class="user-output">
+        <h2 class="shopListTitle">Message To the User</h2>
         <div id="displayResults"></div>
-        <h2>Error Messages</h2>
-        <div id="error"></div>
+        <div id="shopping"></div>
       </div>
     </main>
     <footer class="footer">

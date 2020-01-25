@@ -2,104 +2,62 @@
 document.querySelector("#companyName").textContent = "Pizza Emporium";
 //set the company slogan
 document.querySelector("#companySlogan").textContent = "Object Literals";
-const errorElement = document.querySelector("#error");
+
+// const shopping = document.querySelector("#shopping");
 //results display
 const displaResults = document.querySelector("#displayResults");
 // Get heading for the tree list for specific tree numbers
 const treeListTitle = document.querySelector(".shopListTitle");
-const listTrees = () => {
-  let treeList = "";
-  trees.forEach(tree => {
-    treeList += `${tree}<br>`;
-    displayResults.innerHTML = `${treeList} <span>${trees.length} trees in the list.</span>`;
-  });
-  // listTrees();
-};
-listTrees();
 
-// BUTTON HANDLERS*****************************************
-// RedWood Push
-document.querySelector("#add_redwood").onclick = () => {
-  trees.push("Redwood");
-  listTrees();
-};
-//Pear unshift
-document.querySelector("#add_pear").onclick = () => {
-  trees.unshift("Pear");
-  listTrees();
-};
-//Remove first tree
-document.querySelector("#remove_tree1").onclick = () => {
-  if (trees.length > 1) {
-    trees.shift();
-    listTrees();
-  } else {
-    listTrees();
+let message;
 
-    error.textContent = "you need one tree to delete the first one";
-    displayResults.textContent = "";
-  }
-};
-//Remove second tree
-document.querySelector("#remove_tree2").onclick = () => {
-  if (trees.length < 2) {
-    errorElement.textContent =
-      "you need at least two trees to delete the second tree";
-  } else if (trees.length >= 2) {
-    trees.splice(1, 1);
-  }
-  listTrees();
-};
-//Remove last tree
-document.querySelector("#remove_treeLast").onclick = () => {
-  if (trees.length > 1) {
-    trees.pop();
-    listTrees();
-  } else {
-    listTrees();
-
-    error.textContent = "you need one tree to delete the last one";
-    displayResults.textContent = "";
+const pizza = {
+  crust: "thin",
+  size: "small",
+  topping: "pepperoni",
+  toppingWeight: 1,
+  flour: 1,
+  buildPizza: function() {
+    console.log("build pizza method has been called");
+    message = `We are baking a ${pizza.size} Pizza on a ${pizza.crust} cust with a topping of ${pizza.topping} just for you`;
+    displaResults.textContent = message;
+  },
+  shoppingList: () => {
+    let flour = 1;
+    let toppingWeight = 1;
+    if (pizza.crust === "thick") flour *= 2.5;
+    if (pizza.size === "large") (flour *= 1.5), (toppingWeight += 1);
+    message = `You Will Need to purchase ${flour} Cups of Flour and ${toppingWeight}lb of ${pizza.topping} To make Your Pizza`;
+    displaResults.textContent = message;
+    // flour = null;
+    // topping = null;
   }
 };
 
-//Sort the array locale compare after tolowercase will sort alphabetically in the same case but not change the originally array
-document.querySelector("#sortTrees").onclick = () => {
-  trees.sort((a, b) => {
-    return a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase());
-  });
-  listTrees();
-};
-//Make all trees lowercase
-document.querySelector("#lowerTrees").onclick = () => {
-  trees.toLocaleString();
-  // console.log(trees.toLocaleString().toLowerCase());
-  let myTrees = trees.toLocaleString().toLowerCase();
-  // console.log(myTrees.split(","));
-  let treeList = "";
-  myTrees.split(",").forEach(tree => {
-    treeList += `${tree}<br>`;
-    // console.log(tree);
-    displayResults.innerHTML = `${treeList} <span>${trees.length} trees in the list.</span>`;
-  });
-};
-document.querySelector("#showName3").onclick = () => {
-  if (trees.length < 3) {
-    displayResults.innerHTML = "";
-    errorElement.innerHTML = "there is no tree 3 to display";
-  } else {
-    treeList = [...trees];
-    displayResults.innerHTML = `Tree #3 is: ${treeList[2]}`;
-  }
-};
-document.querySelector("#showName4").onclick = () => {
-  if (trees.length < 4) {
-    displaResults.innerHTML = "";
-    errorElement.textContent = "there is no tree 4 to dipslay";
-  } else {
-    console.log(trees.length);
-    treeList = [...trees];
-    displayResults.innerHTML = `Tree # 4: is ${treeList[3]}`;
-    console.log("check");
-  }
-};
+document
+  .querySelector("#thin")
+  .addEventListener("click", () => (pizza.crust = "thin"));
+document
+  .querySelector("#thick")
+  .addEventListener("click", () => (pizza.crust = "thick"));
+document
+  .querySelector("#pepperoni")
+  .addEventListener("click", () => (pizza.topping = "pepperoni"));
+document
+  .querySelector("#sausage")
+  .addEventListener("click", () => (pizza.topping = "sausage"));
+document
+  .querySelector("#large")
+  .addEventListener("click", () => (pizza.size = "large"));
+document
+  .querySelector("#small")
+  .addEventListener("click", () => (pizza.size = "small"));
+
+document
+  .querySelector("#build-btn")
+  .addEventListener("click", pizza.buildPizza);
+document
+  .querySelector("#shop-list")
+  .addEventListener("click", pizza.shoppingList);
+
+// ***********************************************************************************************

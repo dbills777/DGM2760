@@ -81,8 +81,11 @@ ul {
   grid-column: 1 / span 2;
   grid-row: 1;
 }
-span {
-  color: white;
+
+.user-output {
+  text-align: center;
+  grid-column: 1 / span 2;
+  padding-bottom: 2rem;
 }
 .footer {
   display: grid;
@@ -107,6 +110,7 @@ span {
   text-shadow: 0px 1px 0px #000000;
 }
 .myButton:hover {
+  text-decoration: invert($color: #000000);
   background-color: $base-color;
 }
 .myButton:active {
@@ -114,11 +118,8 @@ span {
   top: 1px;
 }
 #displayResults {
-  background-color: $base-color;
+  background-color: $background-color;
   padding: 1rem;
   font-size: 1.5rem;
   height: 100%;
-}
-#error {
-  color: red;
 }
