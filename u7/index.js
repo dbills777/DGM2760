@@ -18,7 +18,6 @@ const pizza = {
   toppingWeight: 1,
   flour: 1,
   buildPizza: function() {
-    console.log("build pizza method has been called");
     message = `We are baking a ${pizza.size} Pizza on a ${pizza.crust} cust with a topping of ${pizza.topping} just for you`;
     displaResults.textContent = message;
   },
@@ -29,8 +28,6 @@ const pizza = {
     if (pizza.size === "large") (flour *= 1.5), (toppingWeight += 1);
     message = `You Will Need to purchase ${flour} Cups of Flour and ${toppingWeight}lb of ${pizza.topping} To make Your Pizza`;
     displaResults.textContent = message;
-    // flour = null;
-    // topping = null;
   }
 };
 
