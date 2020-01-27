@@ -1,53 +1,21 @@
-//set the company name
-document.querySelector("#companyName").textContent = "Grants Tomb";
-//set the company slogan
-document.querySelector("#companySlogan").textContent = "Object Literals";
+function duplicateMenu() {
+  //get all the anchor elements from the top menu
+  topList = document.querySelectorAll("ul#primaryNavigation li a");
+  console.log(topList);
+  // can check inspect tools to find all available properties of a NodeLIst
 
-// ***************************************************************************************************
+  //create the new list items for the bottom of the page
+  topList.forEach(menuItem => {
+    let newUl = document.createElement("ul");
+    let newLi = document.createElement("li");
+    let newLink = document.createElement("a");
+    newLink.setAttribute("href", menuItem.getAttribute("href"));
+    newLi.appendChild(newLink);
+    document.querySelector("#smallNavArea").appendChild(newUl);
+    newUl.appendChild(newLi);
+    console.log(menuItem.text);
+    newLink.textContent = menuItem.innerText;
+  });
+}
 
-const question = {
-  stem: "Who is burried in grants tomb?",
-  option1: "Tywin",
-  option2: "Tyrion",
-  option3: "Grant",
-  option4: "Cersei",
-  correct: 3,
-  display: () => {
-    document.querySelector("#stem").textContent = question.stem;
-    document.querySelector("#stem").className = "stem";
-    //then display the question options here
-    document.querySelector("#answer1").textContent = question.option1;
-    document.querySelector("#answer2").textContent = question.option2;
-    document.querySelector("#answer3").textContent = question.option3;
-    document.querySelector("#answer4").textContent = question.option4;
-  },
-  check: userChoice => {
-    if (userChoice === question.correct) {
-      document.querySelector(".feedback").classList.add("correct");
-      document.querySelector(
-        ".feedback"
-      ).textContent = `you are correct! ${question.option3} is burried in Grants Tomb`;
-    } else if (userChoice !== question.correct) {
-      document.querySelector(".feedback").classList.remove("correct");
-
-      document.querySelector(".feedback").classList.add("wrong");
-      document.querySelector(
-        ".feedback"
-      ).textContent = `Sorry, ${userChoice} is not the correct answer`;
-    }
-  }
-};
-document
-  .querySelector("#answer1")
-  .addEventListener("click", () => question.check(question.option1));
-document
-  .querySelector("#answer2")
-  .addEventListener("click", () => question.check(question.option2));
-document
-  .querySelector("#answer3")
-  .addEventListener("click", () => question.check(3));
-document
-  .querySelector("#answer4")
-  .addEventListener("click", () => question.check(question.option4));
-
-question.display();
+duplicateMenu();

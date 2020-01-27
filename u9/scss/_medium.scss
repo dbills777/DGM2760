@@ -1,0 +1,17 @@
+.smallMenuLink {
+  display: none;
+}
+header nav ul li {
+  list-style: none;
+  padding: 3rem;
+  display: contents;
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 2rem;
+  }
+}
+nav ul li {
+  display: none;
+}
