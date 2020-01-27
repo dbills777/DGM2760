@@ -10,7 +10,7 @@ const displaResults = document.querySelector("#displayResults");
 const treeListTitle = document.querySelector(".shopListTitle");
 
 let message;
-
+//create pizza object literal
 const pizza = {
   crust: "thin",
   size: "small",
@@ -30,6 +30,7 @@ const pizza = {
     displaResults.textContent = message;
   }
 };
+//set object properties onclinck
 
 document
   .querySelector("#thin")
