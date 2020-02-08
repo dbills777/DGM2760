@@ -1,88 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- google font is in the css file -->
     <meta
-      name="veiwport"
+      name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta charset="utf-8" />
     <meta name="description" content="Fill Me In" />
     <meta name="author" content="John Doe" />
-    <title>Menu Duplication-Bills</title>
     <script defer src="index.js"></script>
     <link href="scss/styles.css" rel="stylesheet" />
+    <title>Pizza-Bills</title>
   </head>
 
   <body>
-    <header>
-      <!-- <div class="smallMenuLink"></div> -->
-      <li class="smallMenuLink"><a href="#smallNavArea">MENU</a></li>
-      <nav>
-        <ul id="primaryNavigation">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#location">location</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#services">Services</a></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div>
+        <h1 id="companyName"></h1>
+        <h2 id="companySlogan"></h2>
+      </div>
     </header>
     <main class="main-container">
-      <h1 class="title">CyberTruck</h1>
-      <div class="image-holder">
-        <img src="./images/cybertruck.png" alt="photo of tesla cybertruck" />
-      </div>
-      <div>
-        <h2>What I Learned</h2>
-        <ul class="objectives">
-          <li>Create an external JSON file</li>
+      <!-- <h1 class="title">The Arboist</h1> -->
+
+      <div class="objectives">
+        <ul>
+          <h3>What I learned</h3>
+          <li>Create an external JSON File</li>
           <li>Load the JSON file using the Fetch API</li>
-          <li>How to use a try catch block</li>
-          <li>
-            How to use an async...await to make asynchronous function calls
-          </li>
-          <li>How to retrieve and store resolved promise data</li>
+          <li>How to use a try...catch block</li>
+          <li>how to retrieve and store resolved Pormise data</li>
           <li>
             Display data from the JSON file on the web page using three
             different buttons
           </li>
         </ul>
       </div>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio optio
-          natus fugiat voluptatum nesciunt eaque pariatur sit, alias similique
-          provident doloremque dolorem nemo facilis unde magnam. Sed non iure
-          omnis beatae debitis illum, quas quibusdam neque, quo nemo inventore?
-          Neque natus ea officiis tempora rerum, rem magni laudantium nostrum
-          modi, ut debitis minus facere quae esse et veritatis nam corrupti ad
-          aperiam dolore itaque impedit illo maxime aliquam? Voluptatum, dolore
-          ipsam. Velit dolorum iusto necessitatibus obcaecati, rerum assumenda
-          porro aspernatur quis fugiat dignissimos ducimus quam tenetur tempore
-          deleniti facilis dolorem est atque nobis quasi repellendus sequi
-          distinctio. Odit, natus officiis!
-        </p>
-      </section>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio optio
-          natus fugiat voluptatum nesciunt eaque pariatur sit, alias similique
-          provident doloremque dolorem nemo facilis unde magnam. Sed non iure
-          omnis beatae debitis illum, quas quibusdam neque, quo nemo inventore?
-          Neque natus ea officiis tempora rerum, rem magni laudantium nostrum
-          modi, ut debitis minus facere quae esse et veritatis nam corrupti ad
-          aperiam dolore itaque impedit illo maxime aliquam? Voluptatum, dolore
-          ipsam. Velit dolorum iusto necessitatibus obcaecati, rerum assumenda
-          porro aspernatur quis fugiat dignissimos ducimus quam tenetur tempore
-          deleniti facilis dolorem est atque nobis quasi repellendus sequi
-          distinctio. Odit, natus officiis!
-        </p>
-      </section>
+      <div class="properties">
+        <h2>Select a Hotel</h2>
+        <button class="myButton" id="mariott-btn">
+         Marriot Hotel Rooms
+        </button>
+        <button class="myButton" id="sheraton-btn">
+          Sheraton Hotel Rooms
+
+        </button>
+        <button class="myButton" id="hilton-btn">
+          Hilton Hotel Rooms
+
+        </button>
+      </div>
+      <div class="user-output">
+        <h2 id="hotelName">Hotel</h2>
+        <button class="myButton">Number of Rooms: <span id="address"></span></button>
+        <button class="myButton">Gym Available: <span id="room"></span></button>
+        <button class="myButton">Room Types: <span id="room"></span></button>
+        <img src="" alt="" id="picture">
+
+      </div>
+    </div>
     </main>
-    <nav id="smallNavArea"></nav>
     <footer class="footer">
-      <p>Derrick Bills Unit09 DGM 2760 &copy 2020</p>
+      <p>Derrick Bills DGM 2760 Unit07 &copy 2020</p>
     </footer>
   </body>
 </html>

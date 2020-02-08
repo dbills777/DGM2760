@@ -21,71 +21,123 @@
 }
 
 // start my styles after this line=======================================================================================================================================
-$base-color: rgb(84, 84, 84);
-$background-color: rgba(0, 0, 0, 0.496);
+$base-color: #7eb6ff;
+$background-color: rgb(123, 123, 123);
 
 body {
   background-color: $background-color;
-  color: white;
 }
-
-.main-container {
-  background-color: lighten($background-color, 10%);
-  display: grid;
-  grid-template-columns: 1fr;
-}
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-ul {
-  background-color: lighten($background-color, 20%);
-}
-li {
-  list-style: none;
-}
-header nav ul li {
-  display: none;
-}
-nav ul li {
-  list-style: none;
+.header {
   padding: 1rem;
-  display: contents;
-  a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 2rem;
-    border-bottom: 1px solid black;
+  div {
+    border-bottom: 5px solid $base-color;
+    margin: 0;
+    padding: 0;
   }
-}
-.smallMenuLink {
-  margin-left: 1rem;
-  padding: 2rem;
-  color: white;
-  a {
-    color: white;
-    text-decoration: none;
+  display: grid;
+  grid-auto-columns: 1fr;
+  align-items: end;
+
+  justify-content: end;
+  height: 200px;
+  background-image: url("../images/pizza.jpg");
+  background-size: cover;
+  background-position: center;
+  min-width: 800px;
+  opacity: 0.6;
+  h2,
+  h1 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    opacity: 1;
+    text-transform: uppercase;
+    text-align: center;
   }
 }
 .title {
-  padding-left: 1rem;
+  width: 100%;
+  grid-column: 1 / span 1;
+  text-align: center;
 }
-.image-holder {
-  img {
-    width: 100%;
-  }
+.main-container {
+  background-color: lighten($background-color, 30%);
+  // height: 80vh;
+  display: grid;
+  align-content: start;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-section {
-  margin: 1rem;
-  width: 90%;
+ul {
+  background-color: $base-color;
+  list-style-image: url(../images/check.png);
+  background-position: center;
+}
+.properties {
+  display: grid;
+}
+.objectives {
+  padding-top: 1rem;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.user-output {
+  border-top: 2px solid white;
+  text-align: center;
+  grid-column: 1 / span 1;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  display: grid;
 }
 .footer {
   display: grid;
   grid-template-columns: 1fr;
-  height: 3rem;
+  // height: 10vh;
   align-items: center;
   text-align: center;
+  background-color: $base-color;
+}
+
+.myForm {
   background-color: $background-color;
+  border-radius: 28px;
+  border: 1px solid $base-color;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 16px 31px;
+  margin: 0.5rem;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #000000;
+}
+.myButton {
+  background-color: $background-color;
+  border-radius: 28px;
+  border: 1px solid $base-color;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 16px 31px;
+  margin: 0.5rem;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #000000;
+}
+.myButton:hover {
+  text-decoration: invert($color: #000000);
+  background-color: $base-color;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+#displayResults {
+  background-color: $background-color;
+  padding: 1rem;
+  font-size: 1.5rem;
+  height: 100%;
 }
