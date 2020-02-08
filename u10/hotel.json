@@ -1,0 +1,28 @@
+{
+  "hotels": [
+    {
+      "name": "Marriott",
+      "rooms": "50",
+      "gym": "yes",
+      "roomTypes": ["King", "Queen", "Double"],
+      "address": "222 that Street",
+      "picture": "room1.jpeg"
+    },
+    {
+      "name": "Sheraton",
+      "rooms": "150",
+      "gym": "yes",
+      "roomTypes": ["King", "Queen", "Double", "Single"],
+      "address": "444 this Street",
+      "picture": "room3.jpeg"
+    },
+    {
+      "name": "Hilton",
+      "rooms": "10",
+      "gym": "No",
+      "roomTypes": ["King", "Queen", "Double", "Single"],
+      "address": "333 that Street",
+      "picture": "room3.jpeg"
+    }
+  ]
+}
