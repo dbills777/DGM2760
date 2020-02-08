@@ -1,28 +1,28 @@
 {
   "hotels": [
     {
-      "name": "Marriott",
-      "rooms": "50",
-      "gym": "yes",
+      "name": "Aria",
+      "rooms": "800",
+      "gym": "Huge Gym",
       "roomTypes": ["King", "Queen", "Double"],
       "address": "222 that Street",
-      "picture": "room1.jpeg"
+      "picture": "images/aria.jpg"
     },
     {
-      "name": "Sheraton",
-      "rooms": "150",
-      "gym": "yes",
+      "name": "Wynn",
+      "rooms": "1550",
+      "gym": "State of the Art",
       "roomTypes": ["King", "Queen", "Double", "Single"],
       "address": "444 this Street",
-      "picture": "room3.jpeg"
+      "picture": "images/wynn.jpg"
     },
     {
-      "name": "Hilton",
-      "rooms": "10",
-      "gym": "No",
+      "name": "Cosmopolitan",
+      "rooms": "1010",
+      "gym": "Olympic Style",
       "roomTypes": ["King", "Queen", "Double", "Single"],
       "address": "333 that Street",
-      "picture": "room3.jpeg"
+      "picture": "images/cosmo.jpeg"
     }
   ]
 }

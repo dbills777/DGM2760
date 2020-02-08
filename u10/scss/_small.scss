@@ -40,7 +40,7 @@ body {
 
   justify-content: end;
   height: 200px;
-  background-image: url("../images/pizza.jpg");
+  background-image: url("../images/header.jpg");
   background-size: cover;
   background-position: center;
   min-width: 800px;
@@ -90,6 +90,16 @@ ul {
   padding-bottom: 2rem;
   display: grid;
 }
+.image {
+  // width: 25%;
+  grid-column: 2 / span 1;
+  max-width: 80%;
+  img {
+    width: 100%;
+    // text-align: center;
+    padding-right: 1rem;
+  }
+}
 .footer {
   display: grid;
   grid-template-columns: 1fr;
@@ -99,20 +109,6 @@ ul {
   background-color: $base-color;
 }
 
-.myForm {
-  background-color: $background-color;
-  border-radius: 28px;
-  border: 1px solid $base-color;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 17px;
-  padding: 16px 31px;
-  margin: 0.5rem;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #000000;
-}
 .myButton {
   background-color: $background-color;
   border-radius: 28px;
