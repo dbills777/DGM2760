@@ -1,7 +1,7 @@
 body{
-  background-color:
+  background-color: green
 }
+
 movies-out {
   display: flex;
-  background-color: #333;
 }
