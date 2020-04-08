@@ -41,3 +41,6 @@ img:hover{
 .content-display{
   display: block;
 }
+#content-close{
+  font-size: 3rem;
+}
