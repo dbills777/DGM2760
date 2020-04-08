@@ -1,7 +1,43 @@
-body{
-  background-color: green
+.container{
+  border: 1px solid blue;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  background-color: rgb(35, 168, 240);
 }
-
-movies-out {
+.search{
+  font-size: 2rem;
+  color: aliceblue;
+  background-color: #777;
+}
+.search:hover{
+  cursor: pointer;
+  background-color: aliceblue;
+  color: #777;
+}
+.section{
   display: flex;
+  width: 100%;
+  overflow-x: auto;
+
+}
+.section img{
+  width: 300px;
+  transition: 250ms all;
+}
+.movies-out{
+  padding: 3rem;
+}
+img:hover{
+  margin-left: 0 40px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.content{
+  border: 1px solid red;
+  display: none;
+
+}
+.content-display{
+  display: block;
 }
