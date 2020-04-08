@@ -75,6 +75,21 @@ function createIframe(video) {
 
   return iframe;
 }
+function createVideoTemplate(data, content) {
+  // todo
+  // display movie videos
+  content.innerHTML = '<p id="content-close">x</p>'
+  console.log("Videos;", data);
+  const videos = data.results;
+  const length = videos.length > 2 ? 2 : videos.length;
+  const iframeContainer = document.createElement("div");
+  for (let i = 0; i < length; i++) {
+    const video = videos[i]; //vido
+    const iframe = createIframe(video);
+    iframeContainer.appendChild(iframe);
+    content.appendChild(iframeContainer);
+  }
+}
 // Event Delegation for elements that are not in the dom until it is seached by the visitor
 document.onclick = function (event) {
   const target = event.target;
@@ -91,20 +106,7 @@ document.onclick = function (event) {
     //fetch movie videos here!
     fetch(url)
       .then((res) => res.json())
-      .then((data) => {
-        // todo
-        // display movie videos
-        console.log("Videos;", data);
-        const videos = data.results;
-        const length = videos.length > 2 ? 2 : videos.length;
-        const iframeContainer = document.createElement("div");
-        for (let i = 0; i < length; i++) {
-          const video = videos[i]; //vido
-          const iframe = createIframe(video);
-          iframeContainer.appendChild(iframe);
-          content.appendChild(iframeContainer);
-        }
-      })
+      .then((data) => createVideoTemplate(data, content))
       .catch((error) => {
         console.log("Error", error);
       });
