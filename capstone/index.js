@@ -32,7 +32,7 @@ function createMovieCards(movies) {
     ${movieSection(movies)}
     </section>
     <div class="content">
-    <p id="content-close">x</p>
+    <p id="content-close"></p>
     </div>
     `;
   movieElement.innerHTML = movieTemplate;
@@ -76,12 +76,11 @@ function createIframe(video) {
   return iframe;
 }
 function createVideoTemplate(data, content) {
-  // todo
   // display movie videos
-  content.innerHTML = '<p id="content-close">X</p>'
+  content.innerHTML = '<p id="content-close">Click to close X</p>'
   console.log("Videos;", data);
   const videos = data.results;
-  const length = videos.length > 2 ? 2 : videos.length;
+  const length = videos.length > 2 ? 2 : videos.length; //only pull 2 youtube videos in results
   const iframeContainer = document.createElement("div");
   for (let i = 0; i < length; i++) {
     const video = videos[i]; //vido

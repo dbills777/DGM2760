@@ -114,6 +114,10 @@ button {
 button:hover {
   background-color: rgba(0, 136, 169, 0.8);
 }
+.location {
+  margin: 0 auto;
+  width: 50%;
+}
 .location,
 .temperature {
   align-items: center;
