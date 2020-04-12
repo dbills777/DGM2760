@@ -1,3 +1,9 @@
+// select dom elemnts to customize for user
+
+// const name = prompt("Please Enter your name")
+const heading = document.querySelector("#heading")
+heading.textContent= `Welome ${name} to the movie database`
+
 const API_KEY = "f757473356258e461984b8a22062f5a4";
 const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
 
@@ -17,9 +23,9 @@ function generateUrl(path) {
 function movieSection(movies) {
   return movies.map((movie) => {
     if (movie.poster_path) {
-      return `<div><h1>${movie.title}</h1><img src=${
+      return `<div><h1>${movie.title}</h1><p>Realese date: ${movie.release_date}</p><img src=${
         IMAGE_URL + movie.poster_path
-      } data-movie-id=${movie.id}/></div>`;
+      } data-movie-id=${movie.id}/><p>synopsis: ${movie.overview}</p></div>`;
     }
   });
 }

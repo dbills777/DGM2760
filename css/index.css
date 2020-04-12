@@ -1,6 +1,11 @@
 body {
   background-color: #eaeaea;
 }
+.movie-database {
+  text-align: left;
+  font-size: 6rem;
+  text-transform: uppercase;
+}
 .container {
   border: 1px solid #ffffff;
   background-image: url("../capstone/images/movie.jpg");
@@ -39,6 +44,13 @@ body {
 }
 .movies-out {
   padding: 3rem;
+  background-color: black;
+}
+.movies-out h1 {
+  color: white;
+}
+.movies-out p {
+  color: white;
 }
 img:hover {
   margin-left: 0 40px;
