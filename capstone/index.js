@@ -78,7 +78,7 @@ function createIframe(video) {
 function createVideoTemplate(data, content) {
   // todo
   // display movie videos
-  content.innerHTML = '<p id="content-close">x</p>'
+  content.innerHTML = '<p id="content-close">X</p>'
   console.log("Videos;", data);
   const videos = data.results;
   const length = videos.length > 2 ? 2 : videos.length;

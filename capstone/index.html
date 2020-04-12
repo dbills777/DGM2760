@@ -10,28 +10,53 @@
     <meta name="description" content="Fill Me In" />
     <meta name="author" content="John Doe" />
     <title>Capstone_Bills</title>
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="../css/index.css" rel="stylesheet" />
   </head>
-
+  <header>
+    <nav>
+      <ul class="nav_links">
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">WeatherApp</a></li>
+        <li><a href="#">ToDo</a></li>
+      </ul>
+    </nav>
+    <a href="" class="cta" href="#"><button>Search</button></a>
+  </header>
   <body>
     <div class="container">
+      <div class="location">
+        <h1 class="location-timezone">Timezone</h1>
+        <canvas class="icon" width="128" height="128"></canvas>
+      </div>
+      <div class="temperature">
+        <div class="degree-section">
+          <h2 class="temperature-degree"></h2>
+          <span>F</span>
+        </div>
+        <div class="temperature-description"></div>
+      </div>
       <h1>Welcome to my movie application</h1>
 
       <form action="">
         <div class="form-group">
-          <input type="text" id="inputValue" placeholder="Search Movie Here" />
+          <input
+            class="form-field"
+            type="text"
+            id="inputValue"
+            placeholder="Search Movie Here"
+          />
         </div>
-        <button type="submit" class ="search" id="search">Submit Search</button>
+        <button type="submit" class="search" id="search">Submit Search</button>
       </form>
     </div>
 
-    <div class="movies-out" id="movie-searchable">
-      </div>
-      
+    <div class="movies-out" id="movie-searchable"></div>
+
     <footer class="footer">
       <p>Derrick Bills Unit09 DGM 2760 &copy 2020</p>
     </footer>
     <script defer src="index.js"></script>
-
+    <script defer src="weather.js"></script>
+    <script defer src="skycons.js"></script>
   </body>
 </html>
