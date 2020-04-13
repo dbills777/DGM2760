@@ -161,4 +161,7 @@ button:hover {
 canvas {
   color: pink;
 }
+.hide {
+  display: none;
+}
 /*# sourceMappingURL=index.css.map */
