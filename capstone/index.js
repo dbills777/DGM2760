@@ -1,8 +1,8 @@
 // select dom elemnts to customize for user
 
 // const name = prompt("Please Enter your name")
-const heading = document.querySelector("#heading")
-heading.textContent= `Welcome ${name} to the movie database`
+const heading = document.querySelector("#heading");
+heading.textContent = `Welcome ${name} to the movie database`;
 
 const API_KEY = "f757473356258e461984b8a22062f5a4";
 const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
@@ -23,9 +23,11 @@ function generateUrl(path) {
 function movieSection(movies) {
   return movies.map((movie) => {
     if (movie.poster_path) {
-      return `<div><h1>${movie.title}</h1><p>Realese date: ${movie.release_date}</p><img src=${
-        IMAGE_URL + movie.poster_path
-      } data-movie-id=${movie.id}/><p>synopsis: ${movie.overview}</p></div>`;
+      return `<div><h1>${movie.title}</h1><p>Realese date: ${
+        movie.release_date
+      }</p><img src=${IMAGE_URL + movie.poster_path} data-movie-id=${
+        movie.id
+      }/><p>synopsis: ${movie.overview}</p></div>`;
     }
   });
 }
@@ -75,15 +77,15 @@ searchButton.onclick = function (event) {
 function createIframe(video) {
   const iframe = document.createElement("iframe");
   iframe.src = `https://www.youtube.com/embed/${video.key}`;
-  iframe.width = 360;
-  iframe.height = 315;
+  iframe.width = 720;
+  iframe.height = 630;
   iframe.allowFullscreen = true;
 
   return iframe;
 }
 function createVideoTemplate(data, content) {
   // display movie videos
-  content.innerHTML = '<p id="content-close">Click to close X</p>'
+  content.innerHTML = '<p id="content-close">Click to close X</p>';
   console.log("Videos;", data);
   const videos = data.results;
   const length = videos.length > 2 ? 2 : videos.length; //only pull 2 youtube videos in results
