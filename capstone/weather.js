@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
   function GetCity(location) {
     let city = location.split("/");
     console.log(city[1]);
-    locationTimezone.textContent= "Weather Forcast For: " + city[1]
+    locationTimezone.textContent= "Weather Forecast For: " + city[1]
     return city
   }
   if (navigator.geolocation) {
