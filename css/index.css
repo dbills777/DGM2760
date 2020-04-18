@@ -10,7 +10,7 @@ body {
   text-transform: uppercase;
 }
 .container {
-  background-color: #569ba7;
+  background-color: #2abbd4;
   margin-top: 3rem;
   margin: auto;
   padding: 5rem;
@@ -175,5 +175,22 @@ canvas {
 }
 .hide {
   display: none;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+/* Track */
+.section::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+.section::-webkit-scrollbar-thumb {
+  background: #28BBD4;
+  border-radius: 10px;
+}
+/* Handle on hover */
+.section::-webkit-scrollbar-thumb:hover {
+  background: #b9c1c2;
 }
 /*# sourceMappingURL=index.css.map */
