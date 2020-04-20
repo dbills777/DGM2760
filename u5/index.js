@@ -10,6 +10,8 @@ const errorElement = document.querySelector("#error");
 const displaResults = document.querySelector("#displayResults");
 // Get heading for the tree list for specific tree numbers
 const treeListTitle = document.querySelector(".treeListTitle");
+
+
 const listTrees = () => {
   let treeList = "";
   trees.forEach(tree => {
@@ -53,6 +55,16 @@ document.querySelector("#remove_tree2").onclick = () => {
   }
   listTrees();
 };
+//Remove all trees
+document.querySelector("#remove_all").onclick = () => {
+  
+    trees.splice(0, trees.length);
+    listTrees();
+      // listTrees();
+    displayResults.textContent = "";
+    error.textContent = "There are no trees left in the List";
+  }
+
 //Remove last tree
 document.querySelector("#remove_treeLast").onclick = () => {
   if (trees.length > 1) {
