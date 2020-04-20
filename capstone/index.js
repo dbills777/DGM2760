@@ -25,9 +25,7 @@ function movieSection(movies) {
     if (movie.poster_path) {
       return `<div><h1>${movie.title}</h1><p>Realese date: ${
         movie.release_date
-      }</p><img src=${IMAGE_URL + movie.poster_path} data-movie-id=${
-        movie.id
-      }/><p>synopsis: ${movie.overview}</p></div>`;
+      }</p><p>Average User Rating ${movie.vote_average}</p><img src=${IMAGE_URL + movie.poster_path} data-movie-id=${movie.id}/><p>synopsis: ${movie.overview}</p></div>`;
     }
   });
 }
@@ -71,7 +69,7 @@ searchButton.onclick = function (event) {
       console.log("Error", error);
     });
   inputElement.value = "";
-  console.log("Value:", value);
+  console.log("Value:", value); // value of searched video title
 };
 
 function createIframe(video) {

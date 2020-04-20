@@ -44,6 +44,11 @@ body {
   display: flex;
   width: 100%;
   overflow-x: auto;
+  align-items: center;
+}
+.section div {
+  margin: 1rem;
+  text-align: center;
 }
 .section img {
   width: 300px;
