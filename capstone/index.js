@@ -83,7 +83,7 @@ function createIframe(video) {
 }
 function createVideoTemplate(data, content) {
   // display movie videos
-  content.innerHTML = '<p id="content-close">Click to close X</p>';
+  content.textContent = '<p id="content-close">Click to close X</p>' 
   console.log("Videos;", data);
   const videos = data.results;
   const length = videos.length > 2 ? 2 : videos.length; //only pull 2 youtube videos in results
@@ -94,6 +94,9 @@ function createVideoTemplate(data, content) {
     iframeContainer.appendChild(iframe);
     content.appendChild(iframeContainer);
   }
+
+
+
 }
 // Event Delegation for elements that are not in the dom until it is seached by the visitor
 document.onclick = function (event) {
