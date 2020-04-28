@@ -2,7 +2,7 @@
 
 // const name = prompt("Please Enter your name")
 const heading = document.querySelector("#heading");
-heading.textContent = `Welcome ${name} to the movie database`;
+heading.textContent = `Welcome to the movie database`;
 
 const API_KEY = "f757473356258e461984b8a22062f5a4";
 const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
