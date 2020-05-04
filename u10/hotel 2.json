@@ -1,0 +1,28 @@
+{
+  "hotels": [
+    {
+      "name": "Aria",
+      "rooms": "800",
+      "gym": "Huge Gym",
+      "roomTypes": ["King", "Queen", "Double"],
+      "address": "222 that Street",
+      "picture": "images/aria.jpg"
+    },
+    {
+      "name": "Wynn",
+      "rooms": "1550",
+      "gym": "State of the Art",
+      "roomTypes": ["King", "Queen", "Double", "Single"],
+      "address": "444 this Street",
+      "picture": "images/wynn.jpg"
+    },
+    {
+      "name": "Cosmopolitan",
+      "rooms": "1010",
+      "gym": "Olympic Style",
+      "roomTypes": ["King", "Queen", "Double", "Single"],
+      "address": "333 that Street",
+      "picture": "images/cosmo.jpeg"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+/*-----Prevents iPhone from resizing in portrait/landscape mode -----*/
+/* html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+} Theese rules are include on line 14,15 of our normalize file and are only needed if using a normalize file where they are included!!!!*/
+/*----------- apply a natural box layout model to all elements --------------*/
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 75rem;
+  margin: auto;
+}
+/* fixes collapse of navbar on med,large screens.. must add class to nav elemnt in html */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// start my styles after this line=======================================================================================================================================
+$base-color: #5037ac;
+$background-color: rgb(123, 123, 123);
+
+body {
+  background-color: $background-color;
+}
+.header {
+  padding: 1rem;
+  div {
+    border-bottom: 5px solid $base-color;
+    margin: 0;
+    padding: 0;
+  }
+  display: grid;
+  grid-auto-columns: 1fr;
+  align-items: end;
+
+  justify-content: end;
+  height: 200px;
+  background-image: url("../images/header.jpg");
+  background-size: cover;
+  background-position: center;
+  min-width: 800px;
+  opacity: 0.6;
+  h2,
+  h1 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    opacity: 1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+.title {
+  width: 100%;
+  grid-column: 1 / span 1;
+  text-align: center;
+}
+.main-container {
+  background-color: lighten($background-color, 30%);
+  // height: 80vh;
+  display: grid;
+  align-content: start;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+ul {
+  background-color: $base-color;
+  list-style-image: url(../images/check.png);
+  background-position: center;
+}
+.properties {
+  display: grid;
+}
+.objectives {
+  padding-top: 1rem;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.user-output {
+  border-top: 2px solid white;
+  text-align: center;
+  grid-column: 1 / span 1;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  display: grid;
+}
+.image {
+  // width: 25%;
+  grid-column: 2 / span 1;
+  max-width: 80%;
+  img {
+    width: 100%;
+    // text-align: center;
+    padding-right: 1rem;
+  }
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  // height: 10vh;
+  align-items: center;
+  text-align: center;
+  background-color: $base-color;
+}
+
+.myButton {
+  background-color: $background-color;
+  border-radius: 28px;
+  border: 1px solid $base-color;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 16px 31px;
+  margin: 0.5rem;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #000000;
+}
+.myButton:hover {
+  text-decoration: invert($color: #000000);
+  background-color: $base-color;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+#displayResults {
+  background-color: $background-color;
+  padding: 1rem;
+  font-size: 1.5rem;
+  height: 100%;
+}

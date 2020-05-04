@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- google font is in the css file -->
+    <meta
+      name="veiwport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta charset="utf-8" />
+    <meta name="description" content="Fill Me In" />
+    <meta name="author" content="John Doe" />
+    <title>Capstone_Bills</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <header>
+    <nav>
+      <ul class="nav_links">
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">WeatherApp</a></li>
+        <li><a href="https://focused-easley-413c83.netlify.app/">ToDo</a></li>
+      </ul>
+    </nav>
+    <a href="" class="cta" href="#"><button>Search</button></a>
+  </header>
+  <body>
+    <div class="container">
+      <p style="color: white;">
+        TodoLink goes to a seperate Project Ive been doing to lern react
+      </p>
+
+      <h1 id="heading" class="movie-database"></h1>
+
+      <div class="movie-search-container">
+        <h1>Search for a movie and view the trailer</h1>
+
+        <form action="">
+          <div class="form-group">
+            <input
+              class="form-field"
+              type="text"
+              id="inputValue"
+              placeholder="Search Movie Here"
+            />
+          </div>
+          <button type="submit" class="search" id="search">
+            Submit Search
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="movies-out" id="movie-searchable"></div>
+
+    <footer class="footer">
+      <div class="weather">
+        <div class="location">
+          <h1 class="location-timezone">Timezone</h1>
+          <canvas class="icon" width="128" height="128"></canvas>
+          <div class="temperature">
+            <div class="degree-section">
+              <h2 class="temperature-degree"></h2>
+              <span class="hide">F</span>
+            </div>
+            <div class="temperature-description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="objectives">
+        <ul>
+          <h3>What I learned</h3>
+          <li>Pull Data from Api</li>
+          <li>Implement Event Handlers</li>
+          <li>Implement Event Listeners</li>
+          <li>Use Fetch</li>
+          <li>Use Object notation on api data</li>
+          <li>Use Template literals</li>
+          <li>Conditional logic</li>
+          <li>Dynamically change values</li>
+          <li>Created Custom Functions</li>
+        </ul>
+      </div>
+    </footer>
+    <script defer src="index.js"></script>
+    <script defer src="weather.js"></script>
+    <script defer src="skycons.js"></script>
+  </body>
+</html>
