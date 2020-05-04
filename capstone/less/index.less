@@ -1,28 +1,28 @@
 // less-watch-compiler --source-map less css index.less
 
+@import 'moviepage.less';
+@import 'nav.less';
+@import 'weather.less';
 
-@import "moviepage.less";
-@import "nav.less";
-@import "weather.less";
 ::-webkit-scrollbar {
   width: 20px;
 }
-html{
+html {
   background-color: black;
 }
 /* Track */
 .section::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
- 
+
 /* Handle */
 .section::-webkit-scrollbar-thumb {
-  background: #28BBD4; 
+  background: #28bbd4;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 .section::-webkit-scrollbar-thumb:hover {
-  background: rgb(185, 193, 194); 
+  background: rgb(185, 193, 194);
 }

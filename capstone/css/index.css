@@ -194,7 +194,7 @@ html {
 }
 /* Handle */
 .section::-webkit-scrollbar-thumb {
-  background: #28BBD4;
+  background: #28bbd4;
   border-radius: 10px;
 }
 /* Handle on hover */
